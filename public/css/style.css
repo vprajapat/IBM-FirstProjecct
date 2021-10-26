@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+ }
+
+ .img_color{
+     background-color: #eeeee4;
+ }
+
+  
+  #counter {
+    color: white;
+    background-color: red;
+    padding: 4px 6px;
+    border-radius: 5px;
+  }
+
+  
