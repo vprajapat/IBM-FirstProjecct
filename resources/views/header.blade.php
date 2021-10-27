@@ -110,7 +110,7 @@
                     </ul>
                     <form class="d-flex">
                        
-                        <button class="btn btn-outline-success" > <a href="{{url('/login')}}" class="text-decoration-none"> Admin Login </a></button>
+                        <button class="btn btn-outline-success" > <a href="{{url('/RegistrationForm')}}" class="text-decoration-none"> Student Registration </a></button>
                       
                     </form>
                 </div>

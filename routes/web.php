@@ -24,6 +24,6 @@ Route::get('/introduction', function () {
     return view('introduction');
 });
 
-Route::get('/login', function () {
-    return view('login');
+Route::get('/RegistrationForm', function () {
+    return view('RegistrationForm');
 });
