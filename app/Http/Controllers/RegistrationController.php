@@ -49,6 +49,7 @@ class RegistrationController extends Controller
         $registration->save();
 
         return redirect('/registration/view');
+        // return redirect('/registration/view');
     }
 
     public function view()
