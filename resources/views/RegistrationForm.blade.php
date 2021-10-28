@@ -6,7 +6,7 @@
             <div class="jumbotron jumbotron-fluid">
               <p class="h3 text-center text-white bg-primary border rounded p-2 m-2">Student Registration Form</p>
                
-              <form class="row g-3" action="{{url('/RegistrationForm')}}" method="POST">
+              <form class="row g-3" action="{{url('/')}}/registration" method="POST">
                 @csrf
                 <div class="col-md-6">
                   <label  class="form-label">First Name</label>
@@ -18,7 +18,7 @@
                 </div>
                 <div class="col-md-4">
                   <label for="inputEmail4" class="form-label">Email</label>
-                  <input type="email" class="form-control" id="inputEmail4">
+                  <input type="email" class="form-control" id="inputEmail4" name="email">
                 </div>
                 <div class="col-md-4">
                   <label  class="form-label">DOB</label>
@@ -43,7 +43,7 @@
                 
                 <div class="col-md-6">
                   <label for="inputCity" class="form-label">City</label>
-                  <input type="text" class="form-control" id="inputCity">
+                  <input type="text" class="form-control" id="inputCity" name="city">
                 </div>
                 <div class="col-md-4">
                   <label for="inputState" class="form-label">State</label>
@@ -89,7 +89,7 @@
                 </div>
                 <div class="col-md-2">
                   <label for="inputZip" class="form-label">Zip</label>
-                  <input type="text" class="form-control" id="inputZip">
+                  <input type="text" class="form-control" id="inputZip" name="zip">
                 </div>
                 
                 <div class="col-12">

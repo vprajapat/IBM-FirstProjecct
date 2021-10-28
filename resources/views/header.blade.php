@@ -110,8 +110,19 @@
                     </ul>
                     <form class="d-flex">
                        
-                        <button class="btn btn-outline-success" > <a href="{{url('/RegistrationForm')}}" class="text-decoration-none"> Student Registration </a></button>
+                        <button class="btn btn-outline-success" > <a href="{{route('student.register')}}" class="text-decoration-none"> Trainee Registration </a></button>
+
+                        
+                       
                       
+                    </form>
+                    <form class="d-flex">
+                       
+                       
+                        <div class="ml-2">
+                        
+                        <button class="btn btn-outline-success ml-1" > <a href="{{route('student.view')}}" class="text-decoration-none"> View Registered Trainee  </a></button>
+                        </div>
                     </form>
                 </div>
             </div>

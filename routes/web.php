@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Models\Registration;
+use App\Http\Controllers\RegistrationController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -24,6 +25,10 @@ Route::get('/introduction', function () {
     return view('introduction');
 });
 
-Route::get('/RegistrationForm', function () {
-    return view('RegistrationForm');
-});
+// Route::get('/RegistrationForm', function () {
+//     return view('RegistrationForm');
+// });
+
+Route::get('/registration', [RegistrationController::class,'index'])->name('student.register');
+Route::post('/registration', [RegistrationController::class,'store']);
+Route::get('/registration/view', [RegistrationController::class,'view'])->name('student.view');
