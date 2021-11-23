@@ -4,7 +4,7 @@
 
 <div class="row m-5 p-3">
     <div class="col">
-        <p class="h3 text-center m-3 bg-primary border rounded p-3" >Registered Trainee Details</p>
+        <p class="h3 text-center m-3 border rounded p-3 text-uppercase" >Registered Trainee Details</p>
         <table class="table table-bordered table-striped">
             <thead>
                 <tr> 
@@ -32,7 +32,14 @@
                     <td>{{$item->city}}</td>
                     <td>{{$item->state}}</td>
                     <td>{{$item->zip}}</td>
-                    <td><button class="btn btn-primary">Edit</button> <button class="btn btn-danger">Delete</button></td>
+                    <td> <a href="{{route('student.edit',['id'=>$item->id])}}"><button class="btn btn-primary">Edit</button>
+                         </a> 
+                            <a href="{{route('student.destroy',['id'=>$item->id])}}"><button class="btn btn-danger">Delete
+                            </button>
+                               
+                            </a>
+                        
+                    </td>
                 </tr>
             @endforeach
             </tbody>

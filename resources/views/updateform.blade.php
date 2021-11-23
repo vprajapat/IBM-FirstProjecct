@@ -20,7 +20,7 @@
                 </div>
                 <div class="col-md-6">
                   <label  class="form-label">Last Name <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="text" class="form-control" name="lname" >
+                  <input type="text" class="form-control" name="lname"   value="{{$register->lname}}">
                   <span class="text-danger">
                     @error('lname')
                         {{$message}}
@@ -29,7 +29,7 @@
                 </div>
                 <div class="col-md-4">
                   <label for="inputEmail4" class="form-label">Email <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="email" class="form-control" id="inputEmail4" name="email" >
+                  <input type="email" class="form-control" id="inputEmail4" name="email" value="{{$register->email}}">
                   <span class="text-danger">
                     @error('email')
                         {{$message}}
@@ -38,7 +38,7 @@
                 </div>
                 <div class="col-md-4">
                   <label  class="form-label">DOB <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="date" class="form-control" name="dob">
+                  <input type="date" class="form-control" name="dob" value="{{$register->dob}}">
                   <span class="text-danger">
                     @error('dob')
                         {{$message}}
@@ -47,8 +47,14 @@
                 </div>
                 <div class="col-md-4">
                   <label class="form-label">Trade <span class="text-danger font-weight-bold">*</span></label>
-                  <select  class="form-select"  name="trade">
-                    <option selected>....Choose...</option>
+                  <select  class="form-select"  name="trade"  >
+{{-- 
+                        @foreach($register as $category)
+                        <option value="{{$category->id}}">{{$category->trade}}     </option>
+                        @endforeach
+
+
+                    <option selected>....Choose...</option> --}}
                     <option value="ELECTRONIC MECHANIC">ELECTRONIC MECHANIC</option>
                     <option value="ICTSM">ICTSM</option>
                     <option value="ELECTRICIAN">ELECTRICIAN</option>
@@ -63,8 +69,8 @@
                   </span>
                 </div>
                 <div class="col-12">
-                  <label  class="form-label">Address <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="text" class="form-control" id="inputAddress"  name="address">
+                  <label  class="form-label">Address <span class="text-danger font-weight-bold" >*</span></label>
+                  <input type="text" class="form-control" id="inputAddress"  name="address"  value="{{$register->address}}" >
                   <span class="text-danger">
                     @error('address')
                         {{$message}}
@@ -74,7 +80,7 @@
                 
                 <div class="col-md-6 ">
                   <label for="inputCity" class="form-label">City <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="text" class="form-control" id="inputCity" name="city">
+                  <input type="text" class="form-control" id="inputCity" name="city"  value="{{$register->city}}">
                   <span class="text-danger">
                     @error('city')
                         {{$message}}
@@ -84,7 +90,7 @@
                 <div class="col-md-4 mt-4">
                   
                     <label for="state">State<span class="text-danger font-weight-bold">*</span></label>
-                    <select id="state" name="state" class="form-control">
+                    <select id="state" name="state" class="form-control"  value="{{$register->state}}">
                         <option value="" selected >...Select State... </option>
                        
                             <option value="Rajasthan1"> Rajasthan1</option>
@@ -95,8 +101,8 @@
                     </select>
                 </div>
                 <div class="col-md-2">
-                  <label for="inputZip" class="form-label">Zip <span class="text-danger font-weight-bold">*</span></label>
-                  <input type="text" class="form-control" id="inputZip" name="zip">
+                  <label for="inputZip" class="form-label">Zip <span class="text-danger font-weight-bold" >*</span></label>
+                  <input type="text" class="form-control" id="inputZip" name="zip"  value="{{$register->zip}}">
                   <span class="text-danger">
                     @error('zip')
                         {{$message}}

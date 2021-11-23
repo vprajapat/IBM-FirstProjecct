@@ -19,7 +19,7 @@
 
 
             <div class="row img_color">
-                <img src="./img/YPS_logo.png" class="rounded" alt="Cinque Terre">
+                <img src="/img/YPS_logo.png" alt="yps iti logo">
             </div>
         </div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
